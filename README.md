@@ -29,7 +29,7 @@ The project has several parts:
    To improve prediction accuracy, a *kernel-based regression model* with radial basis functions (RBF) was implemented. Hyperparameters such as length scales and regularization were tuned using *gradient-based optimization* with the **JAX** library for automatic differentiation. The angular state was represented using `sin(θ)` and `cos(θ)` to handle periodicity and improve model generalization.
 
 3. **Control Policy Optimization:**  
-   A *linear control policy* was optimized using the learned model (model predictive control) and directly on the true system dynamics (model-free control). The policy parameters were optimized via gradient-free and gradient-based methods to minimize a trajectory loss that penalized deviation from the upright position.
+   A *linear control policy* was optimized using the learned model (model-based policy optimization) and directly on the true system dynamics (model-free control). The policy parameters were optimized via gradient-free and gradient-based methods to minimize a trajectory loss that penalized deviation from the upright position.
 
 4. **Noise and Robustness Analysis:**  
    Observation and process noise were introduced to study model degradation and policy robustness.
